@@ -20,8 +20,8 @@ WIN_SEC = 10.0  # 윈도우 길이 (10초)
 # 데이터가 적은 클래스(Chatting, web_surfing)는 촘촘하게 자르기
 # 데이터가 많은 클래스(Game, Writing)는 듬성듬성 자르기
 HOP_SETTINGS = {
-    "Chatting": 1.0,
-    "web_surfing": 1.0,
+    "Chatting": 0.5,
+    "web_surfing": 0.5,
     "Game": 3.0,
     "Writing": 3.0,
 }

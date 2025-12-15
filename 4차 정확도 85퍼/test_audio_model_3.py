@@ -110,6 +110,11 @@ def test_model(X_test, y_test_onehot, CLASSES):
     predictions = model.predict(X_sample)
     y_pred_labels = np.argmax(predictions, axis=1)
 
+    print("=" * 40)
+    print(f"▶ 손실값 (Loss)     : {loss:.4f}")
+    print(f"▶ 정답률 (Accuracy) : {accuracy * 100:.2f}%")
+    print("=" * 40)
+
     for i in range(curr_samples):
         true_name = CLASSES[y_true_labels[i]]
         pred_name = CLASSES[y_pred_labels[i]]
@@ -117,10 +122,7 @@ def test_model(X_test, y_test_onehot, CLASSES):
         result = "✅ 정답" if true_name == pred_name else "❌ 오답"
 
         print(f"Sample {i + 1}: [실제] {true_name} vs [예측] {pred_name} ({confidence:.1f}%) -> {result}")
-        print("=" * 40)
-        print(f"▶ 손실값 (Loss)     : {loss:.4f}")
-        print(f"▶ 정답률 (Accuracy) : {accuracy * 100:.2f}%")
-        print("=" * 40)
+
 
 
 
